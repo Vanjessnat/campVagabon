@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <meta charset="utf-8">
+    <title>Travail pratique 1B Nathalie Arseneault</title>
+    <meta name="camping" content="Le camping Vagabon">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <a class="screen-reader-text" href="#content">Allez au contenu principal</a>
+    <div class="wrapper">
+        <header>
+            <!-- Haut de page -->
+            <!-- Menu pour la navigation principale -->
+            <div class="header" role="navigation">
+                <a href="index.html" target="_self"><img class="header__logo" src="img/logo.jpg"
+                        alt="Camping le vagabon"></a>
+                <nav class="header__right">
+                    <a href="#Decouvrez" class="header__nav" target="_self">Découvrez</a>
+                    <a href="#Camping" class="header__nav" target="_self">Le camping</a>
+                </nav>
+            </div>
+        </header>
+        <!-- Corps de page -->
+        <main id="content">
+            <!-- Contenu section banniere (sec-banner) -->
+            <div class="sec-banner">
+                <div class="sec-banner__bg" id="Decouvrez">
+                    <div class="sec-banner__title">Le camping Vagabon</div>
+                    <div class="sec-banner__title">Entre montagnes et rivière</div>
+                    <div>
+                        <p class="sec-banner__paragraph">L’endroit idéal pour reprendre contact avec la nature, de
+                            nombreux sentiers sont offerts pour vos excursions et randonnées de vélo. Inscrivez-vous à
+                            l'infolettre et découvrez le camping !
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <form action="confirmation.html" class="sec-banner__form">
+                        <fieldset>
+                            <!--  <label for="email-input" class="sec-banner__label">Inscrivez-vous à l'infolettre</label>-->
+                            <input type="email" id="email-input" name="email" placeholder="votrenom@courriel.com"
+                                required aria-label="votrenom@courriel.com" class="sec-banner__form sec-banner__input">
+                            <input type="submit" value="Soumettre" class="sec-banner__btn" aria-label="Soumettre">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <!-- Contenu section camping image (sec-camping) -->
+            <div class="sec-camping-img">
+                <div id="Camping">
+                    <img class="sec-camping-img__image" src="img/piste-de-velo.jpg"
+                        alt="Camping le vagabon. Vous offre des terrains en bordure de la rivière.">
+                </div>
+            </div>
+            <!-- Contenu section camping info (sec-camping-info) -->
+            <div class="sec-camping-info">
+                <div class="sec-camping-info__title">Le camping</div>
+                <div>
+                    <p class="sec-camping-info__paragraph">Partez directement du camping pour accéder aux différents
+                        trajets qui vous offrent des vues magnifiques, tours d’observations et paysages enchanteurs.
+                    </p>
+                </div>
+                <div class="sec-camping-info__data">
+                    <div class=" sec-camping-info__datatitle">Terrains </div>
+                    <div class=" sec-camping-info__datatitle">Sentiers </div>
+                </div>
+                <div class="sec-camping-info__data">
+                    <div class="sec-camping-info__datavalue">150</div>
+
+                    <div class="sec-camping-info__datavalue">12</div>
+                </div>
+                <a role="button" class="sec-camping-info__btn" href="decouvrez.html" target="_blank"
+                    aria-label="Voir plus">Voir plus</a>
+            </div>
+            <!-- Contenu section navigation pied de page (sec-nav-footer) -->
+            <div class="sec-nav-footer" role="navigation">
+                <a href="index.html" target="_self"><img class="sec-nav-footer__logo" src="img/logo.jpg"
+                        alt="Logo Camping le vagabon"></a>
+            </div>
+            <nav class="sec-nav-footer">
+                <ul>
+                    <li><a href="#" target="_self">À propos</a></li>
+                    <!-- mettre ici les selecteurs CSS avancé  -->
+                    <li><a href="decouvrez.html" target="_self" title="decouvrez">Découvrez le camping</a></li>
+                    <li><a href="#" target="_self">Prix de location</a></li>
+                    <li><a href="#" target="_self">Voir le plan</a></li>
+                    <li><a href="contact.html" target="_self" title="decouvrez">Contact</a></li>
+                    <li><a href="#" target="_self">Politiques</a></li>
+                </ul>
+            </nav>
+            <!-- Bas de page -->
+            <footer>
+                <!-- Contenu section information pied de page (footer-info) -->
+                <address class="footer-info" role="navigation">
+                    <div class="footer-info__nom"> Fait par : Nathalie Arseneault</div>
+                    <div class="footer-info__social">
+                        <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram-20.jpg"
+                                alt="instagram"></a>
+                        <a href="https://www.facebook.com/" target="_blank"><img src="img/facebook-20.jpg"
+                                alt="facebook"></a>
+                        <a href="https://www.linkedin.com/" target="_blank"><img src="img/linkedin-20.jpg"
+                                alt="linkedin"></a>
+                        <a href="https://x.com/" target="_blank"><img src="img/tweeter-x.jpg" alt="tweeter-x"></a>
+                    </div>
+                    <div class="footer-info__info">
+                        <div><img src="img/telephone.jpg" alt="telephone"></div>
+                        <div>&nbsp; <a href="tel:8196906430" target="_self">819-690-6430</a></div>
+                    </div>
+                    <div class="footer-info__info">
+                        <div><img src="img/mail.jpg" alt="mail"></div>
+                        <div>&nbsp;<a href="mailto:vanjessnat@gmail.com" target="_blank">info@c-vagabon.com</a></div>
+                    </div>
+                </address>
+            </footer>
+        </main>
+    </div>
+</body>
+
+</html>

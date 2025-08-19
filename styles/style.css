@@ -1,0 +1,722 @@
+:root {
+  /* Palette de couleurs */
+  --primary: #ffffff;
+  --secondary: #202020;
+  --option: #f6faf600;
+  --active: #ec897c;
+  --background: #ec897c;
+  --background-header: #050d3f;
+  --background-secondary: #c9d9e7;
+  --background-option: #050d3fa4;
+
+  /* Espacement */
+  --space5: 5px;
+  --space10: 10px;
+  --space20: 20px;
+  --space30: 30px;
+
+  /* Texte */
+  --standard-font-size: 1.5em;
+  --titles-font-size: 2em;
+  --nav-font-size: 1.2em;
+  --normal-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --titles-font-family: "Raleway", Helvetica, sans-serif;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+
+}
+
+body {
+  background-color: var(--primary);
+  line-height: 1.4;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+
+
+fieldset {
+  border: #ffffff00;
+  padding: 0;
+}
+
+/*                   Code BEM                    */
+/*              Lien rapide vers le contenu pour liseuse     */
+/* code provenant du site suivant : https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/*/
+.screen-reader-text {
+  border: 0;
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+
+  &:focus {
+    background-color: var(--primary);
+    clip-path: none;
+    color: var(--active);
+    display: block;
+    font-size: var(--normal-font-family);
+    left: var(--space5);
+    height: auto;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    top: var(--space5);
+    text-decoration: none;
+    width: auto;
+    z-index: 100000;
+  }
+}
+
+/*                  Contenu bannière de navigation             */
+.header {
+  padding: var(--space10) 0;
+  background-color: var(--background-header);
+  height: 120px;
+  border-bottom: var(--primary) 1px solid;
+
+  & .header__logo {
+    margin-left: var(--space30);
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 0.5rem 1rem 0.5rem 1rem;
+    border: var(--background-option) 1px solid;
+  }
+
+  & .header__right {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: -60px;
+  }
+
+  & .header__nav {
+    margin: 0px var(--space30) 50px 0;
+    padding: 0;
+    text-decoration: underline;
+    font-family: var(--normal-font-family);
+    font-size: var(--nav-font-size);
+    color: var(--primary);
+
+    &:hover {
+      color: var(--active);
+      font-weight: bold;
+      text-decoration: none;
+      font-size: var(--nav-font-size);
+    }
+  }
+}
+
+/*                  Contenu bannière             */
+.sec-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space20) 0 60px 0;
+  background-image: url("../img/couche-soleil-caravane-banner.jpg");
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 650px;
+  margin: 0 auto;
+
+
+  & .sec-banner__bg {
+    background-color: var(--background-option);
+    padding: var(--space10) var(--space10) 0 var(--space10);
+    margin-bottom: var(--space30);
+    border-radius: 0.5rem 2rem 0.5rem 2rem;
+    border: var(--primary) 1px solid;
+  }
+
+  & .sec-banner__title {
+    text-align: center;
+    color: var(--active);
+    font-family: var(--titles-font-family);
+    font-size: var(--titles-font-size);
+    font-weight: bold;
+    min-width: 400px;
+    max-width: 800px;
+  }
+
+  & .sec-banner__paragraph {
+    text-align: center;
+    line-height: 2em;
+    color: var(--primary);
+    font-family: var(--normal-font-family);
+    font-size: var(--normal-font-size);
+    min-width: 400px;
+    max-width: 800px;
+
+  }
+
+  & .sec-banner__btn {
+    border: 1px solid #333;
+    padding: var(--space10) var(--space10);
+    margin-top: var(--space30);
+    color: var(--primary);
+    font-family: var(--normal-font-family);
+    font-size: var(--normal-font-size);
+    background-color: var(--background-header);
+    border-radius: 1rem;
+    width: 200px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: var(--active);
+    }
+  }
+
+  & .sec-banner__label {
+    margin: 0 0 2em 0;
+    font-family: var(--normal-font-family);
+    font-size: var(--normal-font-size);
+    color: var(--secondary)
+  }
+
+  & .sec-banner__form {
+    margin: 1em 0 1em 0;
+    padding: 0em;
+    width: 400px;
+    border-radius: 1rem;
+    text-align: center;
+    font-family: var(--normal-font-family);
+    font-size: var(--normal-font-size);
+  }
+
+  & .sec-banner__input {
+    width: 100%;
+    height: 40px;
+  }
+}
+
+
+/*                 Contenu Camping Image                  */
+.sec-camping-img {
+  margin: 4em 0 4em 0;
+  padding: 1em;
+  height: auto;
+  color: var(--secondary);
+  font-family: var(--normal-font-family);
+
+  & .sec-camping-img__image {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-direction: row;
+    width: 485px;
+    border-radius: 0.5rem 2rem 0.5rem 2rem;
+    border: var(--background-option) 3px solid;
+  }
+}
+
+/*                 Contenu Camping Textes                 */
+.sec-camping-info {
+  margin: 4em 0 2em 2em;
+  padding: 1em;
+  max-width: 100%;
+  color: var(--secondary);
+  font-family: var(--normal-font-family);
+
+  @media only screen and (min-width:500px) and (max-width: 1200px) {
+
+    &.sec-camping-info {
+      margin: -4em 0 3em 0;
+    }
+  }
+
+  & .sec-camping-info__title {
+    text-align: left;
+    color: var(--secondary);
+    font-family: var(--titles-font-family);
+    font-size: var(--titles-font-size);
+    padding: 0 0.5em 0 0;
+    font-weight: bold;
+  }
+
+  & .sec-camping-info__paragraph {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: left;
+    color: var(--secondary);
+    font-family: var(--normal-font-family);
+    font-size: var(--normal-font-family);
+    max-width: 600px;
+    min-width: 400px;
+    padding: 0 0 1em 0;
+    line-height: 2em;
+  }
+
+  & .sec-camping-info__data {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  & .sec-camping-info__datatitle {
+    color: var(--background-option);
+    font-family: var(--titles-font-family);
+    font-size: var(--nav-font-size);
+    width: 200px;
+    font-weight: bold;
+  }
+
+  & .sec-camping-info__datavalue {
+    color: var(--secondary);
+    font-family: var(--normal-font-family);
+    font-size: var(--normal-font-size);
+    width: 200px;
+    font-weight: bold;
+  }
+
+  & .sec-camping-info__btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 1rem;
+    border: 1px solid #333;
+    padding: var(--space5);
+    margin-top: 40px;
+    background-color: var(--background-header);
+    text-decoration: none;
+    color: var(--primary);
+    font-family: var(--normal-font-family);
+    font-size: var(--normal-font-size);
+    width: 150px;
+
+    &:hover {
+      background-color: var(--active);
+    }
+  }
+
+}
+
+
+
+/*                       Page découvrez.html                  */
+/*                       section découvrez                   */
+
+.sec-decouvrez {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space20) 0 60px 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0)), url("../img/camping-couche-soleil.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 650px;
+  margin: 0 auto;
+
+
+  & .sec-decouvrez__bg {
+    padding: var(--space10) var(--space10) 0 var(--space10);
+    margin-bottom: 50px;
+    border-radius: 0.5rem 2rem 0.5rem 2rem;
+
+    &:first-of-type {
+      animation-name: light-dark-scale;
+      animation-duration: 3s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: both;
+    }
+  }
+
+  & .sec-decouvrez__title {
+    text-align: center;
+    color: var(--active);
+    font-family: var(--titles-font-family);
+    font-size: var(--titles-font-size);
+    font-weight: bold;
+    min-width: 400px;
+    max-width: 800px;
+  }
+
+  & .sec-decouvrez__paragraph {
+    text-align: center;
+    line-height: 2em;
+    color: var(--primary);
+    font-family: var(--normal-font-family);
+    font-size: var(--normal-font-size);
+    min-width: 400px;
+    max-width: 800px;
+  }
+}
+
+/*                       section galerie                  */
+
+.sec-galerie {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  margin-bottom: var(--space20);
+
+  & .sec-galerie__title {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 0px 0;
+    text-align: center;
+    color: var(--secondary);
+    font-family: var(--titles-font-family);
+    font-size: var(--titles-font-size);
+    font-weight: bold;
+    width: 100%;
+  }
+
+  & .sec-galerie__paragraph {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 0px 0;
+    text-align: center;
+    color: var(--secondary);
+    font-family: var(--titles-font-family);
+    font-size: var(--normal-font-size);
+    font-weight: bold;
+
+    @media only screen and (min-width:500px) and (max-width: 1200px) {
+      &.sec-galerie__paragraph {
+        display: none;
+      }
+    }
+  }
+
+  & .sec-galerie__image {
+    text-align: center;
+    padding: 0px;
+    margin: var(--space20) 0 var(--space20) 0;
+    border-radius: 2rem .5rem 2rem .5rem;
+    width: 485px;
+    height: auto;
+    border: var(--background-option) 3px solid;
+
+    &:active {
+      transform: scale(1.6, 1.6);
+    }
+
+    @media only screen and (min-width:500px) and (max-width: 1200px) {
+      &.sec-galerie__image {
+        width: 400px;
+      }
+
+      &:active {
+        transform: none;
+      }
+    }
+  }
+}
+
+/*                 Page contact.html                */
+/*                Section information de contact (sec-contact) */
+
+
+.sec-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 650px;
+  color: var(--secondary);
+  font-family: var(--normal-font-family);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0)), url("../img/jeux-deaux.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: var(--primary) 1px solid;
+
+  & .sec-banner__bg {
+    background-color: var(--background-option);
+    padding: 0px var(--space10) var(--space10) var(--space10);
+    border-radius: 0.5rem 2rem 0.5rem 2rem;
+    border: var(--primary) 1px solid;
+    width: 400px;
+  }
+
+  & .sec-contact__title {
+    color: var(--active);
+    font-family: var(--titles-font-family);
+    font-size: var(--titles-font-size);
+    padding: 0.5em 0.5em 0 0;
+    margin-bottom: var(--space20);
+    font-weight: bold;
+  }
+
+  & .sec-contact__input {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: left;
+    color: var(--secondary);
+    font-family: var(--normal-font-family);
+    font-size: var(--normal-font-family);
+    border-radius: 1rem;
+    border: 1px solid #333;
+    margin: 0em 0 1em 0;
+    padding: var(--space10);
+    width: 350px;
+  }
+
+  & .sec-contact__label {
+    color: var(--primary);
+    font-family: var(--normal-font-family);
+    font-size: var(--normal-font-size);
+    font-weight: var(--nav-font-size);
+    margin: 0em 0 0em 0;
+    line-height: 2em;
+  }
+
+  & .sec-contact__btn {
+    border-radius: 1rem;
+    border: 1px solid #333;
+    padding: var(--space10);
+    margin-top: 40px;
+    background-color: var(--background-header);
+    text-decoration: none;
+    color: var(--primary);
+    font-family: var(--normal-font-family);
+    font-size: var(--normal-font-size);
+    width: 150px;
+
+    &:hover {
+      background-color: var(--active);
+    }
+  }
+
+}
+
+/*                     Contenu navigation pied de page            */
+.sec-nav-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  padding: var(--space30) 0px var(--space30) 0px;
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+  color: var(--primary);
+  font-family: var(--normal-font-family);
+  background-color: var(--background-option);
+
+  & ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    color: var(--primary);
+    font-family: var(--normal-font-family);
+    list-style: none;
+  }
+
+  &.sec-nav-footer a {
+    color: var(--primary);
+    padding: 0px var(--space30) 0px var(--space30);
+
+    &:hover {
+      color: var(--secondary);
+    }
+
+    &[title~=decouvrez] {
+      color: var(--active);
+      animation-name: clignotant;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      animation-fill-mode: both;
+
+      &:hover {
+        color: var(--secondary);
+      }
+    }
+
+    &[title~=contact] {
+      color: var(--active);
+
+    }
+  }
+
+  @media only screen and (min-width:500px) and (max-width: 1200px) {
+    &.sec-nav-footer ul {
+      flex-direction: column;
+      padding: var(--space20) 0 var(--space20) 0;
+      line-height: 40px;
+    }
+  }
+}
+
+/*                     Contenu information du  pied de page          */
+footer {
+  width: 100%;
+}
+
+.sec-nav-footer__logo {
+  display: block;
+  align-items: center;
+  border-radius: 0.5rem 1rem 0.5rem 1rem;
+  border: var(--background-option) 1px solid;
+
+  @media only screen and (min-width:500px) and (max-width: 1200px) {
+    &.sec-nav-footer__logo {
+      margin-top: 0px;
+      margin-bottom: -30px;
+    }
+  }
+}
+
+.footer-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+
+  padding: 40px 0px var(--space20) 0px;
+
+
+  color: var(--secondary);
+  font-family: var(--normal-font-family);
+  font-style: normal;
+
+  @media only screen and (min-width:500px) and (max-width: 1200px) {
+    &.footer-info {
+      flex-direction: column;
+      align-items: center;
+      line-height: 40px;
+
+    }
+  }
+}
+
+& .footer-info__nom {
+  display: flex;
+  align-items: flex-start;
+  min-width: 400px;
+
+  @media only screen and (min-width:500px) and (max-width: 1200px) {
+    &.footer-info__nom {
+      justify-content: center;
+      width: 250px;
+      padding: var(--space20) 0 var(--space20) 0;
+    }
+  }
+}
+
+& .footer-info__social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 200px;
+}
+
+& .footer-info__info {
+  display: flex;
+  align-content: space-evenly;
+  justify-content: flex-end;
+
+  & a {
+    color: var(--secondary)
+  }
+
+  & a:hover {
+    color: var(--active)
+  }
+
+  @media only screen and (min-width:500px) and (max-width: 1200px) {
+    & .footer-info__info {
+      align-content: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 400px;
+      padding: var(--space20) var(--space10) var(--space20) var(--space10);
+    }
+  }
+}
+
+@keyframes clignotant {
+
+  0% {
+    color: var(--secondary)
+  }
+
+  100% {
+    color: var(--primary)
+  }
+}
+
+@keyframes light-dark-scale {
+
+  0% {
+    background-color: var(--background-header);
+    border: var(--primary) 1px solid;
+    transform: scale(2);
+  }
+
+  25% {
+    background-color: var(--background-option);
+    border: var(--background) 1px solid;
+  }
+
+  50% {
+    background-color: var(--background-header);
+    border: var(--primary) 1px solid;
+  }
+
+  75% {
+    background-color: var(--background-option);
+    border: var(--background) 1px solid;
+  }
+
+  100% {
+    background-color: var(--background-option);
+    border: var(--primary) 1px solid;
+    transform: scale(1);
+  }
+}
